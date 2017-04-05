@@ -1,0 +1,41 @@
+.payment {
+  margin: -1px 0 0 0;
+  &__list {
+    overflow: hidden;
+  }
+  &__item {
+    display: block;
+    float: left;
+    &--mastercard {
+      .bg(@mastercard);
+      margin: 0;
+    }
+    &--visa {
+      .bg(@visa);
+      margin: 6px 0 0 21px;
+    }
+    &--american {
+      .bg(@american-express);
+      margin: 6px 0 0 21px;
+    }
+    &--paypal {
+      .bg(@paypal);
+      margin: 9px 0 0 22px;
+    }
+  }
+}
+
+@media(max-width: 767px) {
+  .payment {
+    display: inline-block;
+  }
+}
+
+@media(max-width: 420px) {
+  .payment {
+    &__item {
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+  }
+}

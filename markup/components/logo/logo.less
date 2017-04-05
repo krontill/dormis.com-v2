@@ -1,0 +1,23 @@
+.logo {
+  background: url(%=static=%assets/logo/logo.png) no-repeat 0 0;
+  width: 199px;
+  height: 36px;
+  display: inline-block;
+  text-indent: -9999px;
+  margin: 38px 0 0 0;
+  transition: margin 0.3s, background 0.3s;
+  float: left;
+  text-align: left;
+  &:hover,
+  &:focus {
+    background: url(%=static=%assets/logo/logo-hover.png) no-repeat 0 0;
+  }
+  &--dark {
+    background: url(%=static=%assets/logo/logo-dark.png) no-repeat 0 0;
+    margin: 17px 0 0 0;
+    &:hover,
+    &:focus {
+      background: url(%=static=%assets/logo/logo-dark.png) no-repeat 0 0;
+    }
+  }
+}

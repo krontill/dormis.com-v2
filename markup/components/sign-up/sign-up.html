@@ -1,0 +1,53 @@
+<div class="tabs-sign">
+    <div class="tabs-sign__header">
+        <h5 class="tabs-sign__title">Sign up</h5>
+    </div>
+
+    <div class="tabs-sign__body">
+        <div class="hr">
+            <span class="hr__text">With</span>
+        </div>
+        {{> auth-social/auth-social}}
+        <div class="hr">
+            <span class="hr__text">Or</span>
+        </div>
+
+        <form class="tabs-sign__form" method="post" name="application-form" onsubmit="return account_registration(this);" action="/ajax/account/registration" id="form-registration">
+            <div class="form-group form-group--modal">
+                <label class="label" for="email">Email</label>
+                <span class="label__required">*</span>
+                <input name="email" id="email" type="email" class="input">
+                <ul class="custom-form-error"></ul>
+            </div>
+            <div class="form-group form-group--modal">
+                <label class="label" for="password">Password</label>
+                <span class="label__required">*</span>
+                <input name="password" id="password" type="password" class="input">
+                <ul class="custom-form-error"></ul>
+            </div>
+            <div class="form-group form-group--modal-end">
+                <label class="label" for="password_confirm">Confirm password</label>
+                <span class="label__required">*</span>
+                <input name="password_confirm" id="password_confirm" type="password" class="input">
+                <ul class="custom-form-error"></ul>
+                <!--<div id="password-error" class="custom-form-error hidden">Passwords does not match</div>-->
+            </div>
+            <div class="modal-footer">
+                <input type="submit" class="btn btn--size-s" value="Sign up">
+            </div>
+        </form>
+        <!--
+            <div>
+                <a href="/oauth2/facebook/do.auth">Sign up by Facebook</a>
+                <a href="/oauth2/google/do.auth">Sign up by Google+</a>
+            </div>
+        -->
+    </div>
+
+    <div class="tabs-sign__footer">
+        <div class="tabs-sign__footer-text">
+            By signing up, I agree to <a href="#" target="_blank" class="tabs-sign__footer-link">Terms and conditions</a> and <a href="#" target="_blank" class="tabs-sign__footer-link">Privacy policy & cookies</a>.
+        </div>
+    </div>
+
+</div>

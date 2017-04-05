@@ -1,0 +1,16 @@
+.city-selection {
+  &__city {
+    font-size: 14px;
+    color: @city-selection-city;
+    .select2-results__option--highlighted & {
+      color: rgb(255, 255, 255);
+    }
+  }
+  &__region {
+    font-size: 13px;
+    color: @city-selection-region;
+    .select2-results__option--highlighted & {
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+}

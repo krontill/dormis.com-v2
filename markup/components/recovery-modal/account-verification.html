@@ -1,0 +1,31 @@
+<div id="accountVerificationModal" class="modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form action="#">
+                <div class="modal-header">
+                    <h5 class="modal-title">Account verification</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    An e-mail with the verification code has been sent to
+                    you. Please paste it into the field below to prove that
+                    this is your account.
+                    <div class="hr"></div>
+                    <div class="form-group form-group--modal">
+                        <label class="label" for="verification-email">Email</label>
+                        <span class="label__required">*</span>
+                        <input class="input" type="email" id="verification-email">
+                    </div>
+                    <div class="form-group form-group--modal">
+                        <label class="label" for="verification-code">Verification code</label>
+                        <span class="label__required">*</span>
+                        <input class="input" type="text" id="verification-code">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" class="btn btn--size-s" value="Submit" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

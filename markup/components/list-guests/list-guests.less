@@ -1,0 +1,38 @@
+.list-guests {
+  border-radius: 0 0 4px 4px;
+  background: @list-guests-bg;
+  box-shadow: 0 5px 27.2px 4.8px rgba(0, 0, 0, 0.07);
+  width: 205px;
+  border: none;
+  padding: 4px 0 8px 0;
+  position: absolute;
+  z-index: 9;
+  display: none;
+  &__container {
+    width: 100%;
+    &.select2-container--open {
+      .select2-selection--single {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom-color: @list-guests-border-bottom;
+      }
+    }
+  }
+  &__line {
+    padding: 10px 10px 9px 11px;
+    line-height: 19px;
+  }
+  &__label {
+    font-size: 13px;
+    color: @list-guests-label-color;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0 0 2px 0;
+    font-weight: normal;
+    top: 1px;
+    position: relative;
+  }
+  .jq-number {
+    float: right;
+  }
+}

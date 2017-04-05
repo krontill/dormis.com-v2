@@ -1,0 +1,47 @@
+<div class="tabs-sign">
+    <div class="tabs-sign__header">
+        <h5 class="tabs-sign__title">Sign in</h5>
+    </div>
+
+    <div class="tabs-sign__body">
+        <div class="hr">
+            <span class="hr__text">With</span>
+        </div>
+        {{> auth-social/auth-social}}
+        <div class="hr">
+            <span class="hr__text">Or</span>
+        </div>
+
+        <form class="tabs-sign__form" method="post" name="application-form" onsubmit="return account_auth(this);" action="/ajax/account/auth" id="form-auth">
+            <div class="form-group form-group--modal">
+                <label class="label" for="auth_email">Email</label>
+                <span class="label__required">*</span>
+                <input name="email" id="auth_email" type="email" class="input">
+                <ul class="custom-form-error"></ul>
+            </div>
+            <div class="form-group form-group--modal">
+                <label class="label" for="auth_password">Password</label>
+                <span class="label__required">*</span>
+                <input name="password" id="auth_password" type="password" class="input">
+                <ul class="custom-form-error"></ul>
+            </div>
+            <div class="form-group form-group--middle">
+                <div class="checkbox">
+                    <input id="remember-me" type="checkbox" name="remember_me">
+                    <label for="remember-me" class="label label--checkbox">Remember me</label>
+                    <ul class="custom-form-error"></ul>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <input type="submit" class="btn btn--size-s" value="Sign in"/>
+            </div>
+        </form>
+    </div>
+
+    <div class="tabs-sign__footer">
+        <a class="tabs-sign__footer-link" href="#recoveryBeginModal" data-toggle="modal" data-target="#recoveryBeginModal">
+            Forgot Password?
+        </a>
+    </div>
+
+</div>

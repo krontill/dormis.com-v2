@@ -1,0 +1,100 @@
+.nav-tabs {
+  .flex-justify();
+  padding: 0;
+  list-style: none;
+  margin: 0 0 2px 0;
+  overflow: hidden;
+  .nav-item {
+    flex: 1;
+    &:first-child .nav-link {
+      border-radius: 10px 0 0 0;
+    }
+    &:last-child .nav-link {
+      border-radius: 0 10px 0 0;
+    }
+  }
+  .nav-link {
+    background: @tabs-nav-bg;
+    font-size: 14px;
+    color: @tabs-nav-link-color;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    padding: 12px 13px 13px;
+    &:focus,
+    &:hover {
+      text-decoration: none;
+    }
+    &:before {
+      content: '';
+      background: @tabs-nav-link-bg;
+      bottom: 0;
+      position: absolute;
+      width: 100%;
+      left: 0;
+      box-shadow: 0 5px 27.2px 4.8px @tabs-nav-shadow;
+    }
+  }
+  .nav-link.active,
+  .nav-item.show .nav-link {
+    color: @tabs-nav-link-active-color;
+    background: @tabs-nav-link-active-bg;
+    z-index: 1;
+    box-shadow: 0 5px 27.2px 4.8px @tabs-nav-shadow;
+    &:before {
+      content: '';
+      height: 1px;
+      background: @tabs-nav-link-bg;
+      bottom: -1px;
+      position: absolute;
+      width: 100%;
+      left: 0;
+      box-shadow: none;
+    }
+  }
+}
+
+.tab__content {
+  & > .tab__pane {
+    display: none;
+  }
+  & > .active {
+    display: block;
+  }
+}
+
+.tabs-sign {
+  &__header {
+    .modal-header();
+  }
+  &__title {
+    .modal-title();
+  }
+  &__body {
+    padding: 8px 60px 0;
+    font-size: 14px;
+    color: @modal-body-color;
+    line-height: 22px;
+  }
+  &__form {
+    margin: 0 20px;
+    padding: 12px 0 0 0;
+  }
+  &__footer {
+    .flex-center();
+    padding: 21px 15px 20px;
+    background: @tabs-sign-footer;
+    border-radius: 0 0 10px 10px;
+  }
+  &__footer-text {
+    font-size: 12px;
+    color: @modal-body-color;
+    line-height: 25px;
+    .tabs-sign__footer-link {
+      font-size: 12px;
+    }
+  }
+  &__footer-link {
+    font-size: 13px;
+  }
+}

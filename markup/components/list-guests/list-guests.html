@@ -1,0 +1,35 @@
+<div class="select2-container select2-container--white list-guests__container select2-guestnumber-click">
+
+    <span class="select2-selection select2-selection--single">
+        <span class="select2-selection__rendered" id="select2-guestnumber-container">1</span>
+        <span class="select2-selection__arrow select2-guestnumber-click">
+            <b role="presentation"></b>
+        </span>
+    </span>
+
+    <input type="hidden" id="guestnumbers" name="guestnumbers" value="1">
+    <input type="hidden" id="guests-adult-hidden" name="guests-adult" value="1">
+    <input type="hidden" id="guests-teens-hidden" name="guests-teens" value="0">
+    <input type="hidden" id="guests-child-hidden" name="guests-child" value="0">
+    <input type="hidden" id="guests-babies-hidden" name="guests-babies" value="0">
+
+    <div class="list-guests">
+        <div class="list-guests__line">
+            <label class="list-guests__label" for="guests-adult">Adults (&gt;16)</label>
+            {{> styler-number/styler-number styler-number.guestsAdult}}
+        </div>
+        <div class="list-guests__line">
+            <label class="list-guests__label" for="guests-teens">Children (10-16)</label>
+            {{> styler-number/styler-number styler-number.guestsTeens}}
+        </div>
+        <div class="list-guests__line">
+            <label class="list-guests__label" for="guests-child">Children (2-10)</label>
+            {{> styler-number/styler-number styler-number.guestsChild}}
+        </div>
+        <div class="list-guests__line">
+            <label class="list-guests__label" for="guests-babies">Babies (&lt;2)</label>
+            {{> styler-number/styler-number styler-number.guestsBabies}}
+        </div>
+    </div>
+
+</div>

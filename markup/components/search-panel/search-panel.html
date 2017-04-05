@@ -1,0 +1,47 @@
+<div class="search-panel">
+    {{> title/title title.searchPanel}}
+    <form action="/rental/amsterdam/" method="GET" name="search-panel" role="form">
+
+        <div class="search-panel__form">
+
+            <div class="search-panel__item">
+                <label class="label" for="city">City</label>
+                <select name="city_uid" id="city" class="js-select2-city select2-hidden-accessible" style="width: 100%">
+                    <option value="-1">Where are you going?</option>
+                    <option value="amsterdam" data-city="Noord-Holland, Netherlands">Amsterdam</option>
+                    <option value="barcelona" data-city="Catalunya, Spain">Barcelona</option>
+                    <option value="barnet" data-city="England, United Kingdom">Barnet</option>
+                    <option value="hamburg" data-city="Germany">Hamburg</option>
+                    <option value="istanbul" data-city="İstanbul, Turkey">Istanbul</option>
+                    <option value="london" data-city="England, United Kingdom">London</option>
+                    <option value="madrid" data-city="Comunidad de Madrid, Spain">Madrid</option>
+                    <option value="montcada-i-reixac" data-city="Catalunya, Spain">Montcada i Reixac</option>
+                </select>
+            </div>
+
+            <div class="search-panel__item">
+                <label class="label" for="arrival-date">Arrival</label>
+                <input id="arrival-date" class="input input--transparent" type="text" placeholder="dd/mm/yyyy" readonly="true">
+                {{> icons/icon-calendar}}
+            </div>
+
+            <div class="search-panel__item">
+                <label class="label" for="departure-date">Departure</label>
+                <input id="departure-date" class="input input--transparent" type="text" placeholder="dd/mm/yyyy" readonly="true">
+                {{> icons/icon-calendar}}
+            </div>
+
+            <div class="search-panel__item">
+                <label class="label">Number of people</label>
+                {{> list-guests/list-guests}}
+            </div>
+
+        </div>
+
+        <div class="search-panel__btn-wrap">
+            <input type="submit" class="btn" name="send" id="send-button" value="Search">
+            {{> spinner/spinner spinner.searchBlock}}
+        </div>
+
+    </form>
+</div>

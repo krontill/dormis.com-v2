@@ -1,0 +1,69 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+<head>
+    {{> head/head head.defaults}}
+</head>
+
+<body class="page">
+%=symbols=%
+
+<section class="page__wrapper">
+
+    {{> header/header}}
+    {{> home-slider/home-slider}}
+    {{> search-panel/search-panel}}
+    {{> masonry/masonry--country}}
+    {{> masonry/masonry--districts}}
+    {{> why/why}}
+    {{> features/features}}
+
+    <!--modal-->
+    {{> sign-modal/sign-modal}}
+    {{> recovery-modal/recovery-modal-begin}}
+    <a href="#recoveryBeginModal" data-toggle="modal" data-target="#recoveryBeginModal">
+        recoveryBeginModal
+    </a>
+    <br>
+    {{> recovery-modal/account-verification}}
+    <a href="#accountVerificationModal" data-toggle="modal" data-target="#accountVerificationModal">
+        Account verification - unnecessary
+    </a>
+    <br>
+    {{> recovery-modal/new-password}}
+    <a href="#newPasswordModal" data-toggle="modal" data-target="#newPasswordModal">
+        New password
+    </a>
+    <br>
+    {{> recovery-modal/recovery-modal-done}}
+    <a href="#recoveryDoneModal" data-toggle="modal" data-target="#recoveryDoneModal">
+        recoveryDoneModal
+    </a>
+    <br>
+    {{> recovery-modal/code-sent}}
+    <a href="#codeSent" data-toggle="modal" data-target="#codeSent">
+        Code sent
+    </a>
+    <br>
+    {{> recovery-modal/sending-failed}}
+    <a href="#sendingFailed" data-toggle="modal" data-target="#sendingFailed">
+        Sending failed
+    </a>
+    <br>
+    <!--modal end-->
+
+</section>
+
+<footer class="page__footer">
+    {{> footer/footer}}
+    {{> cookies/cookies}}
+</footer>
+
+<script src="%=static=%js/separate-js/svg4everybody.min.js"></script>
+<script>svg4everybody();</script>
+
+<!-- Main scripts. You can replace it, but I recommend you to leave it here     -->
+<script src="%=static=%js/main.%=hash=%%=min=%.js"></script>
+</body>
+
+</html>

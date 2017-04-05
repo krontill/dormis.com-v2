@@ -1,0 +1,40 @@
+.contact {
+  padding: 71px 0;
+  text-align: center;
+  &__title {
+    font-size: 17px;
+    color: @footer-contact-title;
+    line-height: 20px;
+    text-align: left;
+    letter-spacing: 0.15px;
+    font-weight: 600;
+    padding: 0 0 16px 0;
+    display: inline-block;
+  }
+  &__wrap {
+    display: inline-block
+  }
+  &__list {
+    display: inline-block;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+  }
+  &__item {
+    list-style: none;
+  }
+  &__text {
+    font-size: 14px;
+    color: @footer-contact-title;
+    line-height: 25px;
+  }
+  &__info {
+    .link-effect(@background: @footer-contact-link-line-color, @height: 1px, @bottom: 1px);
+  }
+}
+
+@media (max-width: 1199px) {
+  .contact {
+    text-align: left;
+  }
+}

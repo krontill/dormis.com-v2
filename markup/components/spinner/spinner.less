@@ -1,0 +1,55 @@
+.spinner {
+  display: none;
+  width: 40px;
+  text-align: right;
+  &__item {
+    width: 10px;
+    height: 10px;
+    background-color: #4e5152;
+    border-radius: 100%;
+    display: inline-block;
+    -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+    animation: bouncedelay 1.4s infinite ease-in-out;
+    /* Prevent first frame from flickering when animation starts */
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+
+    &--1 {
+      -webkit-animation-delay: -0.32s;
+      animation-delay: -0.32s;
+    }
+    &--2 {
+      -webkit-animation-delay: -0.16s;
+      animation-delay: -0.16s;
+    }
+  }
+  &--search-block {
+    margin: -31px auto 0;
+    .spinner__item {
+      background-color: #fff;
+    }
+  }
+  &--modal {
+    margin: 0 auto;
+    position: absolute;
+    .spinner__item {
+      background-color: #fff;
+    }
+  }
+  &--guide-page {
+    position: absolute;
+    top: 7px;
+    left: 58px;
+    .spinner__item {
+      background-color: #fff;
+    }
+  }
+  &--active {
+    .spinner {
+      display: block;
+    }
+    .btn {
+      text-indent: -9999px;
+    }
+  }
+}

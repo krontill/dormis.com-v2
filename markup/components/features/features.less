@@ -1,0 +1,58 @@
+.features {
+  text-align: justify;
+  margin: 0 0 50px;
+  &__wrap {
+    border-radius: 15px;
+    background-color: @features-bg;
+    box-shadow: 0 5px 27.2px 4.8px rgba(0, 0, 0, 0.07);
+    min-height: 360px;
+    margin: 0 0 32px;
+    padding: 16px 40px 40px;
+    text-align: center;
+    overflow: hidden;
+  }
+  &__icon {
+    display: block;
+    margin: 0 auto;
+    &--owners {
+      margin-top: 27px;
+      margin-bottom: 1px;
+      left: -13px;
+      position: relative;
+      .bg(@features-1);
+    }
+    &--services {
+      margin-top: 49px;
+      .bg(@features-2);
+    }
+    &--program {
+      margin-top: 51px;
+      .bg(@features-3);
+    }
+    &--companies {
+      margin-top: 30px;
+      .bg(@features-4);
+    }
+  }
+  &__title {
+    font-size: 26px;
+    font-weight: 100;
+    color: @features-title-color;
+    padding: 23px 0 5px;
+    display: inline-block;
+    &:focus,
+    &:hover {
+      text-decoration: none;
+      color: @features-title-color;
+    }
+  }
+  &__text {
+    font-size: 14px;
+    color: @features-text-color;
+    line-height: 20px;
+    padding: 6px 0 26px;
+    min-height: 72px;
+    max-width: 250px;
+    margin: 0 auto;
+  }
+}

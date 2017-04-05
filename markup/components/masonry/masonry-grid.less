@@ -1,0 +1,279 @@
+.masonry-grid {
+  width: 1560px;
+  margin: -15px auto;
+  display: none;
+  &__item {
+    float: left;
+    width: 390px;
+    height: 300px;
+    &--mobile {
+      margin: 30px auto;
+      position: relative;
+      height: auto;
+      float: none;
+    }
+    &--width2 {
+      width: 780px;
+    }
+    &--height2 {
+      height: 600px;
+      @media (max-width: 991px) {
+        height: 570px;
+      }
+      .masonry-grid__coming-soon {
+        top: 273px;
+      }
+    }
+  }
+  &__item-country,
+  &__item-city {
+    background: @masonry-grid-city-bg;
+    height: 25px;
+    font-size: 13px;
+    color: @masonry-grid-city-color;
+    text-transform: uppercase;
+    line-height: 20px;
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    border-radius: 13px;
+    padding: 2px 11px 3px;
+    letter-spacing: 0.15px;
+  }
+  &__item-name {
+    color: @masonry-grid-item-name-color;
+    font-size: 18px;
+    font-weight: 600;
+    height: 20px;
+    line-height: 20px;
+    width: 100%;
+    position: absolute;
+    bottom: 17px;
+    padding-left: 18px;
+    pointer-events: none;
+    letter-spacing: 0.15px;
+    &--country {
+      top: 124px;
+      text-align: center;
+      font-size: 28px;
+      padding: 0;
+      font-weight: 400;
+    }
+  }
+  &__coming-soon {
+    font-size: 21px;
+    color: @masonry-grid-coming-soon;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 24px;
+    top: 118px;
+    position: relative;
+    text-align: center;
+    letter-spacing: 0.25px;
+  }
+  &__item-wrap {
+    margin: 15px;
+    position: relative;
+  }
+  &__item-image {
+    &--westminster {
+      background: url('%=static=%assets/masonry/westminster.jpg') no-repeat;
+      .masonry-grid-image(360px, 270px);
+    }
+    &--sagrada-familia {
+      background: url('%=static=%assets/masonry/sagrada-familia.jpg') no-repeat;
+      .masonry-grid-image(360px, 570px);
+    }
+    &--ciutat-vella {
+      background: url('%=static=%assets/masonry/ciutat-vella.jpg') no-repeat;
+      .masonry-grid-image(360px, 270px);
+    }
+    &--el-gotic {
+      background: url('%=static=%assets/masonry/el-gotic.jpg') no-repeat;
+      .masonry-grid-image(360px, 270px);
+    }
+    &--la-barceloneta {
+      background: url('%=static=%assets/masonry/la-barceloneta.jpg') no-repeat;
+      .masonry-grid-image(750px, 270px);
+    }
+    &--kensington {
+      background: url('%=static=%assets/masonry/kensington.jpg') no-repeat;
+      .masonry-grid-image(360px, 270px);
+    }
+    &--the-city {
+      background: url('%=static=%assets/masonry/the-city.jpg') no-repeat;
+      .masonry-grid-image(750px, 270px);
+    }
+    &--bloomsbury {
+      background: url('%=static=%assets/masonry/bloomsbury.jpg') no-repeat;
+      .masonry-grid-image(360px, 570px);
+    }
+
+    /*country*/
+    &--london {
+      background: url('%=static=%assets/masonry/masonry-country-london_mini.jpg') no-repeat;
+      .masonry-grid-image(360px, 270px);
+    }
+    &--rome {
+      background: url('%=static=%assets/masonry/masonry-country-rome_mini.jpg') no-repeat;
+      .masonry-grid-image(360px, 270px);
+    }
+    &--barcelona {
+      background: url('%=static=%assets/masonry/masonry-country-barcelona_mini.jpg') no-repeat;
+      .masonry-grid-image(360px, 270px);
+    }
+    &--havana {
+      background: url('%=static=%assets/masonry/masonry-country-havana_mini.jpg') no-repeat;
+      .masonry-grid-image(360px, 270px);
+    }
+    &--mallorca {
+      background: url('%=static=%assets/masonry/masonry-country-mallorca_mini.jpg') no-repeat;
+      .masonry-grid-image(360px, 270px);
+    }
+    &--kissimmee {
+      background: url('%=static=%assets/masonry/masonry-country-kissimmee_mini.jpg') no-repeat;
+      .masonry-grid-image(360px, 270px);
+    }
+    &--deming {
+      background: url('%=static=%assets/masonry/masonry-country-deming_mini.jpg') no-repeat;
+      .masonry-grid-image(360px, 270px);
+    }
+    &--dalmatia {
+      background: url('%=static=%assets/masonry/masonry-country-dalmatia_mini.jpg') no-repeat;
+      .masonry-grid-image(360px, 270px);
+    }
+    &--budapest {
+      background: url('%=static=%assets/masonry/masonry-country-budapest_mini.jpg') no-repeat;
+      .masonry-grid-image(360px, 270px);
+    }
+    /*country end*/
+
+    &--mobile {
+      position: relative;
+      width: 100%;
+      background-size: inherit;
+      max-width: 360px;
+      background-position-x: center;
+      margin: 0 auto;
+    }
+  }
+  &--notebook {
+    width: 1170px;
+    display: none;
+  }
+  &--tablet {
+    width: 780px;
+    display: none;
+    overflow: hidden;
+    max-width: 100%;
+  }
+  &--mobile {
+    display: none;
+    max-width: 100%;
+    overflow: hidden;
+    margin-top: -20px;
+    margin-bottom: -25px;
+  }
+}
+
+@media (max-width: 767px) {
+  .masonry-grid {
+    display: none;
+    &--notebook {
+      display: none;
+    }
+    &--tablet {
+      display: none;
+    }
+    &--mobile {
+      display: block;
+    }
+    &__item--periodical {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .masonry-grid {
+    display: none;
+    &--notebook {
+      display: none;
+    }
+    &--tablet {
+      display: none;
+    }
+    &--mobile {
+      display: block;
+    }
+    &__item--periodical {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .masonry-grid {
+    display: none;
+    &--notebook {
+      display: none;
+    }
+    &--tablet {
+      display: block;
+    }
+    &--mobile {
+      display: none;
+    }
+    &__item--periodical {
+      display: none;
+    }
+    &--all-resolution {
+      display: block;
+      width: 780px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .masonry-grid {
+    display: none;
+    &--notebook {
+      display: block;
+    }
+    &--tablet {
+      display: none;
+    }
+    &--mobile {
+      display: none;
+    }
+    &__item--periodical {
+      display: block;
+    }
+    &--all-resolution {
+      display: block;
+      width: 1170px;
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+  .masonry-grid {
+    display: block;
+    &--notebook {
+      display: none;
+    }
+    &--tablet {
+      display: none;
+    }
+    &--mobile {
+      display: none;
+    }
+    &__item--periodical {
+      display: none;
+    }
+    &--all-resolution {
+      display: block;
+      width: 1560px;
+    }
+  }
+}

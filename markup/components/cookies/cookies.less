@@ -1,0 +1,32 @@
+.cookies {
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: #282A2B;
+  min-height: 61px;
+  line-height: 21px;
+  padding: 20px 0;
+  z-index: 2;
+  animation-duration: 0.8s;
+  animation-name: slideUp;
+  opacity: 0.9;
+  &__text {
+    font-size: 14px;
+    color: #E9F0F6;
+    transition: font-size 200ms;
+    margin: 0 77px 0 10px;
+    display: inline-block;
+    a {
+      .link-effect(@background: @footer-contact-link-line-color, @height: 1px, @bottom: 1px);
+    }
+  }
+  &__close {
+    .bg(@cookies-close);
+    margin: 3px 60px 0 0;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 0;
+  }
+}

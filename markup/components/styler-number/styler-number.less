@@ -1,0 +1,136 @@
+.jq-number {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 22px;
+  &__field {
+    width: 28px;
+    height: 22px;
+    @media (max-width: 767px) {
+      width: 40px;
+      height: 26px;
+      position: absolute;
+      right: 0;
+      top: -4px;
+    }
+    & .error {
+      display: none !important;
+    }
+    input {
+      box-sizing: border-box;
+      width: 30px;
+      height: 22px;
+      line-height: 22px;
+      padding: 0;
+      border: none;
+      box-shadow: none;
+      outline: none;
+      background: none;
+      font-size: 14px;
+      color: @list-guests-input-color;
+      text-align: center;
+      -moz-appearance: textfield;
+      &:hover,
+      &:focus {
+        box-shadow: none;
+      }
+      &::-webkit-inner-spin-button,
+      &::-webkit-outer-spin-button {
+        margin: 0; /* в каких-то браузерах присутствует отступ */
+        -webkit-appearance: none;
+      }
+      @media (max-width: 767px) {
+        width: 40px;
+        height: 26px;
+      }
+    }
+  }
+  &__spin {
+    position: absolute;
+    top: 0;
+    width: 22px;
+    height: 22px;
+    background: @list-guests-spin-bg;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 0 0 6.72px 0.28px rgba(0, 0, 0, 0.14);
+    border: 1px solid transparent;
+    opacity: 1;
+    &.dis {
+      opacity: 0.25;
+      box-shadow: 0 0 6.72px 0.28px rgba(0, 0, 0, 0.392);
+      //psd: 0.7 opacity block * 0.14 rgba  = 0.098
+      //now: 0.25 * 0.392 = 0.098
+      //Потому что была проблема убирания опасити с псевдоэлементов.
+    }
+    &.plus {
+      right: 0;
+      left: auto;
+    }
+    &.minus {
+      right: auto;
+      left: 0;
+      &:after {
+        display: none;
+      }
+    }
+    &:before,
+    &:after {
+      opacity: 1;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      top: 5px;
+      left: 9px;
+      width: 2px;
+      height: 10px;
+      border: none;
+      border-radius: 2px;
+      background: @list-guests-plus-minus-bg;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      top: 9px;
+      left: 5px;
+      width: 10px;
+      height: 2px;
+      border: none;
+      border-radius: 2px;
+      background: @list-guests-plus-minus-bg;
+    }
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 6.72px 0.28px rgba(0, 0, 0, 0.24);
+      &:before,
+      &:after {
+        background: @list-guests-plus-minus-bg-hover;
+      }
+    }
+    &:active {
+      box-shadow: 0 0 6.72px 0.28px rgba(0, 0, 0, 0.34);
+    }
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+  &.focused {
+    .jq-number__spin {
+      opacity: 0.8;
+    }
+  }
+  &.disabled {
+    opacity: 0.5;
+  }
+  @media (max-width: 767px) {
+    &.dis {
+      pointer-events: auto;
+      opacity: 1;
+    }
+  }
+}
