@@ -12,36 +12,27 @@
             <span class="hr__text">Or</span>
         </div>
 
-        <form class="tabs-sign__form" method="post" name="application-form" onsubmit="return account_registration(this);" action="/ajax/account/registration" id="form-registration">
+        <form class="tabs-sign__form" method="post" name="application-form" action="/" id="form-registration">
             <div class="form-group form-group--modal">
                 <label class="label" for="email">Email</label>
                 <span class="label__required">*</span>
-                <input name="email" id="email" type="email" class="input">
-                <ul class="custom-form-error"></ul>
+                <input name="email" id="email" type="email" class="input" required>
             </div>
             <div class="form-group form-group--modal">
                 <label class="label" for="password">Password</label>
                 <span class="label__required">*</span>
-                <input name="password" id="password" type="password" class="input">
-                <ul class="custom-form-error"></ul>
+                <input name="password" id="password" type="password" class="input" required>
             </div>
             <div class="form-group form-group--modal-end">
                 <label class="label" for="password_confirm">Confirm password</label>
                 <span class="label__required">*</span>
-                <input name="password_confirm" id="password_confirm" type="password" class="input">
-                <ul class="custom-form-error"></ul>
-                <!--<div id="password-error" class="custom-form-error hidden">Passwords does not match</div>-->
+                <input name="password_confirm" id="password_confirm" type="password" class="input" required>
             </div>
             <div class="modal-footer">
                 <input type="submit" class="btn btn--size-s" value="Sign up">
             </div>
         </form>
-        <!--
-            <div>
-                <a href="/oauth2/facebook/do.auth">Sign up by Facebook</a>
-                <a href="/oauth2/google/do.auth">Sign up by Google+</a>
-            </div>
-        -->
+
     </div>
 
     <div class="tabs-sign__footer">

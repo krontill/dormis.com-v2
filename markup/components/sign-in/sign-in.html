@@ -12,24 +12,21 @@
             <span class="hr__text">Or</span>
         </div>
 
-        <form class="tabs-sign__form" method="post" name="application-form" onsubmit="return account_auth(this);" action="/ajax/account/auth" id="form-auth">
+        <form class="tabs-sign__form" method="post" name="application-form" action="/" id="form-auth">
             <div class="form-group form-group--modal">
                 <label class="label" for="auth_email">Email</label>
                 <span class="label__required">*</span>
-                <input name="email" id="auth_email" type="email" class="input">
-                <ul class="custom-form-error"></ul>
+                <input name="email" id="auth_email" type="email" class="input" required>
             </div>
             <div class="form-group form-group--modal">
                 <label class="label" for="auth_password">Password</label>
                 <span class="label__required">*</span>
-                <input name="password" id="auth_password" type="password" class="input">
-                <ul class="custom-form-error"></ul>
+                <input name="password" id="auth_password" type="password" class="input" required>
             </div>
             <div class="form-group form-group--middle">
                 <div class="checkbox">
                     <input id="remember-me" type="checkbox" name="remember_me">
                     <label for="remember-me" class="label label--checkbox">Remember me</label>
-                    <ul class="custom-form-error"></ul>
                 </div>
             </div>
             <div class="modal-footer">

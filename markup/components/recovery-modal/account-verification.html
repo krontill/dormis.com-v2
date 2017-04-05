@@ -1,7 +1,7 @@
 <div id="accountVerificationModal" class="modal">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <form action="#">
+            <form action="/" id="account-verification">
                 <div class="modal-header">
                     <h5 class="modal-title">Account verification</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
@@ -12,14 +12,14 @@
                     this is your account.
                     <div class="hr"></div>
                     <div class="form-group form-group--modal">
-                        <label class="label" for="verification-email">Email</label>
+                        <label class="label" for="verification_email">Email</label>
                         <span class="label__required">*</span>
-                        <input class="input" type="email" id="verification-email">
+                        <input class="input" type="email" id="verification_email" name="verification_email" required>
                     </div>
                     <div class="form-group form-group--modal">
-                        <label class="label" for="verification-code">Verification code</label>
+                        <label class="label" for="verification_code">Verification code</label>
                         <span class="label__required">*</span>
-                        <input class="input" type="text" id="verification-code">
+                        <input class="input" type="text" id="verification_code" name="verification_code" required>
                     </div>
                 </div>
                 <div class="modal-footer">
