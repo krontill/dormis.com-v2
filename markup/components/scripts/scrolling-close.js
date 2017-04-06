@@ -1,7 +1,9 @@
 $(window).on('load', function () {
     //Load для того чтобы скрипт не срабатывал при первоначальном скролле при загрузке страницы, когда скролл сработал, а select2 еще нет.
-    $(window).scroll(function () {
-        $('.js-select2-city').select2('close');
+    $(window).scroll(function (e) {
+        if($(e.target)[0].parentElement === null) {
+            $('.js-select2-city').select2('close');
+        }
         $('.js-currency_user').select2('close');
         $('.js-lang_user').select2('close');
         if ($('.list-guests').is(':visible')) {
