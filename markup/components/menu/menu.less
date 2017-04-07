@@ -1,70 +1,144 @@
 .menu {
-  text-align: center;
-  animation: fadeIn 3.5s;
-  &__list {
-    margin: 45px 0 0 0;
-    padding: 0;
-    list-style: none;
-    display: inline-block;
-    transition: margin 0.3s;
-  }
-  &__item {
-    display: inline-block;
-    padding: 0 13px;
-    &--select {
-      margin: 0 -15px;
+    text-align: center;
+    animation: fadeIn 3.5s;
+    &__list {
+        margin: 45px 0 0 0;
+        padding: 0;
+        list-style: none;
+        display: inline-block;
+        transition: margin 0.3s;
     }
-    &--hide {
-      display: none;
+    &__item {
+        display: inline-block;
+        padding: 0 13px;
+        &--select {
+            margin: 0 -15px;
+        }
+        &--hide {
+            display: none;
+        }
     }
-  }
-  &__imitation-text,
-  &__link {
-    display: inline-block;
-    letter-spacing: 0.15px;
-    font-size: 14px;
-    font-weight: 400;
-    color: @menu-link-color;
-    text-transform: uppercase;
-    line-height: 20px;
-    text-align: left;
-    position: relative;
-    transition: ease-out 0.3s 0.1s;
-    &:hover,
-    &:focus {
-      color: @menu-link-hover;
-      text-decoration: none;
+    &__imitation-text,
+    &__link {
+        display: inline-block;
+        letter-spacing: 0.15px;
+        font-size: 14px;
+        font-weight: 400;
+        color: @menu-link-color;
+        text-transform: uppercase;
+        line-height: 20px;
+        text-align: left;
+        position: relative;
+        transition: ease-out 0.3s 0.1s;
+        &:hover,
+        &:focus {
+            color: @menu-link-hover;
+            text-decoration: none;
+        }
+        .link-effect();
     }
-    .link-effect();
-  }
-  &__imitation {
-    cursor: pointer;
-    position: relative;
-    margin: 0 21px 0 16px;
-    &--hide {
-      display: none;
+    &__imitation {
+        cursor: pointer;
+        position: relative;
+        margin: 0 21px 0 16px;
+        &--hide {
+            display: none;
+        }
     }
-  }
-  &__imitation-arrow {
-    border-color: @menu-arrow transparent transparent transparent;
-    border-style: solid;
-    border-width: 4px 4px 0 4px;
-    position: absolute;
-    margin: 9px 0 0 5px;
-  }
-  &--dark {
-    .menu__list {
-      margin: 24px 0 0 0;
+    &__imitation-arrow {
+        border-color: @menu-arrow transparent transparent transparent;
+        border-style: solid;
+        border-width: 4px 4px 0 4px;
+        position: absolute;
+        margin: 9px 0 0 5px;
     }
-    .menu__link,
-    .menu__imitation-text {
-      color: @darkmenu-link-color;
-      &:hover,
-      &:focus {
-        color: @darkmenu-link-hover;
-      }
-      .link-effect(@darkmenu-link-color);
+    &--dark {
+        .menu__list {
+            margin: 24px 0 0 0;
+        }
+        .menu__link,
+        .menu__imitation-text {
+            color: @darkmenu-link-color;
+            &:hover,
+            &:focus {
+                color: @darkmenu-link-hover;
+            }
+            .link-effect(@darkmenu-link-color);
+        }
+        .menu__toggle {
+            margin: 15px auto 0;
+        }
+        .menu__toggle-item {
+            background: @darkmenu-link-color;
+        }
     }
+    &__toggle {
+        width: 40px;
+        height: 30px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+        margin: 36px auto 0;
+        display: none;
+        transition: margin 0.3s, background 0.3s;
+    }
+    &__toggle--on {
+        .menu__toggle-item--one {
+            transform: rotate(45deg) translate(7px, 7px);
+        }
+        .menu__toggle-item--two {
+            opacity: 0;
+        }
+        .menu__toggle-item--three {
+            transform: rotate(-45deg) translate(8px, -10px);
+        }
+    }
+    &__toggle-item {
+        width: 100%;
+        height: 5px;
+        background: @menu-link-color;
+        margin: 6px auto;
+        backface-visibility: hidden;
+        transition-duration: 0.3s;
+    }
+}
 
-  }
+@media (min-width: 992px) and (max-width: 1199px) {
+    .menu {
+        &__item {
+            padding: 0 9px;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .menu {
+        position: relative;
+        &__toggle {
+            display: inline-block;
+        }
+        &__list {
+            background: @search-panel-form-bg;
+            border-radius: 10px;
+            box-shadow: 0 5px 27.2px 4.8px rgba(0, 0, 0, 0.07);
+            position: absolute;
+            right: 0;
+            margin: 75px 0 0 0;
+            padding: 11px 0;
+            display: none;
+        }
+        &--dark {
+            .menu__list {
+                margin: 54px 0 0 0;
+            }
+        }
+        &__list--show {
+            display: inline-block;
+        }
+        &__item {
+            display: block;
+            padding: 6px 40px;
+        }
+    }
 }

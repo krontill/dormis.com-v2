@@ -21,5 +21,11 @@
             jQuery('.select2-container--transparent').removeClass('select2-container--transparent-dark');
         }
     }
+
+    jQuery('.menu__toggle').on('click', function() {
+        jQuery(this).toggleClass('menu__toggle--on');
+        jQuery('.menu__list').toggleClass('menu__list--show');
+    });
+
 })();
 

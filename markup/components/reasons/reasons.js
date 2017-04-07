@@ -52,7 +52,7 @@
                         jQuery(".reasons__nav").css({zIndex: '-1'});
                     });
                     sly_reasons.on('moveEnd', function () {
-                        jQuery(".reasons__nav").css({zIndex: '1'});
+                        jQuery(".reasons__nav").css({zIndex: '2'});
                     });
                 }
             }

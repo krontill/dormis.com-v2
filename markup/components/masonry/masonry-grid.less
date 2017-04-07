@@ -17,9 +17,6 @@
     }
     &--height2 {
       height: 600px;
-      @media (max-width: 991px) {
-        height: 570px;
-      }
       .masonry-grid__coming-soon {
         top: 273px;
       }
@@ -155,6 +152,7 @@
       max-width: 360px;
       background-position-x: center;
       margin: 0 auto;
+      border-radius: 10px;
     }
   }
   &--notebook {
@@ -192,6 +190,14 @@
       display: block;
     }
   }
+}
+
+@media (max-width: 390px) {
+    .masonry-grid {
+        &__item {
+            width: 100%;
+        }
+    }
 }
 
 @media (min-width: 768px) {
