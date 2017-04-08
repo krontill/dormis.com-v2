@@ -4,10 +4,10 @@
         var objForm = jQuery('form[name="search-panel"]');
         var city = jQuery('#city option:selected').val();
 
-        var newaction = city != '' ? '/rental/' + city + '/' : '/rental/';
+        var newaction = '/'; //city != '' ? '/rental/' + city + '/' : '/rental/';
 
         if (city == -1) {
-            newaction = '/rental/';
+            newaction = '/';
         }
 
         if (city != -1 && city != '') {

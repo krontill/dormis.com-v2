@@ -4,9 +4,9 @@
   box-shadow: 0 5px 27.2px 4.8px rgba(0, 0, 0, 0.07);
   position: absolute;
   left: 50%;
-  margin: 0 0 0 -489px;
+  margin: 0 0 0 -480px;
   top: 208px;
-  width: 981px;
+  width: 960px;
   min-height: 373px;
   z-index: 1;
   padding: 24px 0 0 0;
@@ -17,7 +17,7 @@
     color: white;
     background: @search-panel-form-bg;
     margin: 34px auto 42px;
-    padding: 20px 26px 35px 27px;
+    padding: 20px 15px 35px;
     .cf();
   }
   &__item {
@@ -33,21 +33,28 @@
   }
 }
 
-@media (max-width: 1020px) {
+@media (max-width: 991px) {
   .search-panel {
-    width: 500px;
-    margin: 0 0 0 -250px;
+    width: 510px;
+    margin: 0 0 0 -255px;
     top: 104px;
     padding: 27px 0 38px;
     &__form {
       margin: 35px auto 38px;
-      padding: 20px 26px 17px 27px;
+      padding: 20px 15px 17px;
     }
     &__item {
       float: none;
       margin: 0 auto 18px;
     }
   }
+}
+
+@media (max-width: 500px) {
+    .search-panel {
+        width: 290px;
+        margin: 0 0 0 -145px;
+    }
 }
 
 @media (max-width: 320px) {

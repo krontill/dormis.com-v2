@@ -67,7 +67,8 @@
         return null;
     }
 
-    $('.js-select2-city').select2({
+    var select2City = $('.js-select2-city');
+    select2City.select2({
         placeholder: {
             id: '-1', // the value of the option
             text: "where are you going?"
@@ -83,6 +84,10 @@
             }
             return data.text;
         }
+    });
+    select2City.data('select2').$dropdown.find('.select2-results__options').addClass("scrollbar-macosx");
+    select2City.on("select2:open", function () {
+        $('.select2-results__options.scrollbar-macosx').scrollbar();
     });
 
 })();

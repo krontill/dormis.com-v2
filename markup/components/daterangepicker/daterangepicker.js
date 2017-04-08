@@ -23,9 +23,11 @@
     });
 
     jQuery('#departure-date').on('show.daterangepicker', function (ev, picker) {
-        picker.container.css({margin: '10px 0 0 -232px'});
-        console.log(ev);
-        console.log(picker.container[0]); // margin-left: -232px;
+        if($(window).width() > 991){
+            picker.container.css({margin: '10px 0 0 -232px'});
+        }
+        //console.log(ev);
+        //console.log(picker.container[0]); // margin-left: -232px;
     });
 
 })();
