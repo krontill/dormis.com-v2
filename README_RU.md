@@ -1,4 +1,4 @@
-<p> Сайт: <a target="_blank" href="http://dormis.krontill.ru/">dormis.krontill.ru</a></p>
+<p> Сайт: <a href="http://dormis.krontill.ru/">dormis.krontill.ru</a></p>
 
 ---
 

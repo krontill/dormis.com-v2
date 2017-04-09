@@ -1,4 +1,4 @@
-<p> Site: <a target="_blank" href="http://dormis.krontill.ru/">dormis.krontill.ru</a></p>
+<p> Site: <a href="http://dormis.krontill.ru/">dormis.krontill.ru</a></p>
 
 ---
 
