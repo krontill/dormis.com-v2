@@ -1,98 +1,96 @@
 // Common styles of the project
 
 html, body {
-  height: 100%;
+    height: 100%;
 }
 
 .page {
-  /*display: table;
-  height: 100%;
-  width: 100%;
-  &__wrapper {
-    display: table-row;
+    display: flex;
+    flex-direction: column;
     height: 100%;
-  }*/
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  max-width: 1920px;
-  background: @page-bg;
-  margin: 0 auto;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.42857143;
-  color: @page-color;
-  &__wrapper {
-    flex: 1 0 auto;
-    background: @page-wrapper-bg;
-  }
-  &__footer {
-    flex: 0 0 auto;
-  }
-  &:after {
-    content: url(%=static=%assets/logo/logo-hover.png) url(%=static=%assets/logo/logo-dark.png);
-    display: none;
-  }
+    max-width: 1920px;
+    background: @page-bg;
+    margin: 0 auto;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: @page-color;
+    &__wrapper {
+        flex: 1 0 auto;
+        background: @page-wrapper-bg;
+    }
+    &__footer {
+        flex: 0 0 auto;
+    }
+    &:after {
+        content: url(%=static=%assets/logo/logo-hover.png)
+            url(%=static=%assets/logo/logo-dark.png)
+            url(%=static=%assets/logo/logo-dark-hover.png)
+            url(%=static=%assets/logo/logo-hover-2x.png)
+            url(%=static=%assets/logo/logo-dark-2x.png)
+            url(%=static=%assets/logo/logo-dark-hover-2x.png);
+        display: none;
+    }
 }
 
-h1, h2 , h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
     margin: 0;
 }
 
 a {
-  padding: 0;
-  font-size: 14px;
-  color: @footer-menu-link-color;
-  line-height: 25px;
-  display: inline-block;
-  position: relative;
-  text-decoration: none;
+    padding: 0;
+    font-size: 14px;
+    color: @footer-menu-link-color;
+    line-height: 25px;
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
 }
 
 * {
-  box-sizing: border-box;
-  outline: none;
-  &::selection {
-    background: @selection;
-    color: inherit;
-  }
+    box-sizing: border-box;
+    outline: none;
+    &::selection {
+        background: @selection;
+        color: inherit;
+    }
 }
 
 @media (min-width: 1600px) {
-  .container {
-    width: 1560px;
-    max-width: 100%;
-  }
+    .container {
+        width: 1560px;
+        max-width: 100%;
+    }
 
-  .col-xxl-3 {
-    width: 25%;
-  }
+    .col-xxl-3 {
+        width: 25%;
+    }
 }
 
 .dropdown-menu {
-  display: none;
+    display: none;
 }
 
 .form-group {
-  &--modal {
-    margin: 0 26px 17px;
-  }
-  &--modal-end {
-    margin: 0 26px 23px;
-  }
-  &--middle {
-    margin: 32px 0 10px;
-  }
+    &--modal {
+        margin: 0 26px 17px;
+    }
+    &--modal-end {
+        margin: 0 26px 23px;
+    }
+    &--middle {
+        margin: 32px 0 10px;
+    }
 }
 
 .custom-form-error {
-  margin: 0 0 -4px 4px;
-  padding: 0;
-  list-style: none;
-  font-size: 13px;
-  color: @label-error;
-  display: block;
-  position: relative;
-  top: 3px;
+    margin: 0 0 -4px 4px;
+    padding: 0;
+    list-style: none;
+    font-size: 13px;
+    color: @label-error;
+    display: block;
+    position: relative;
+    top: 3px;
 }
