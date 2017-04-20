@@ -5,7 +5,7 @@
   &__item {
     width: 10px;
     height: 10px;
-    background-color: #4e5152;
+    background-color: @spinner-item-dark;
     border-radius: 100%;
     display: inline-block;
     -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
@@ -26,14 +26,14 @@
   &--search-block {
     margin: -31px auto 0;
     .spinner__item {
-      background-color: #fff;
+      background-color: @spinner-item-white;
     }
   }
   &--modal {
     margin: 0 auto;
     position: absolute;
     .spinner__item {
-      background-color: #fff;
+      background-color: @spinner-item-white;
     }
   }
   &--guide-page {
@@ -41,7 +41,7 @@
     top: 7px;
     left: 58px;
     .spinner__item {
-      background-color: #fff;
+      background-color: @spinner-item-white;
     }
   }
   &--active {
