@@ -1,0 +1,3 @@
+# robots.txt for http://dormis.krontill.ru/
+User-Agent: *
+Disallow: /
